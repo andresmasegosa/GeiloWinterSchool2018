@@ -53,12 +53,12 @@ $ java -cp target/example-project-full.jar NameOfTheJavaFile
 
 ## Session 1: Introduction to Probabilistic Machine Learning
   
-    * Slides can be downloaded [here]().
+   * Slides can be downloaded [here]().
 
 ## Session 2: Introduction to the AMIDST Toolbox.
   
-    * Slides can be downloaded [here]().
-    * Code exercises can be found [here](). 
+   * Slides can be downloaded [here]().
+   * Code exercises can be found [here](). 
 
     
 
