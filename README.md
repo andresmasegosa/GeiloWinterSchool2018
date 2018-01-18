@@ -26,7 +26,7 @@ $ git clone https://github.com/andresmasegosa/GeiloWinterSchool2018.git
 Enter in the downloaded folder:
 
 ```bash
-$ cd example-project/
+$ cd GeiloWinterSchool2018/
 ```
 
 If you have installed maven, you can compile and build the package:
@@ -35,9 +35,9 @@ If you have installed maven, you can compile and build the package:
 $ mvn clean package
 ```
 
-For runing a piece of code you should type:
+For runing any Java file you should type:
 
 ```bash
-$ java -cp target/example-project-full.jar BasicExample
+$ java -cp target/example-project-full.jar NameOfTheJavaFile
 
 ```
