@@ -31,7 +31,7 @@ import org.apache.commons.math3.analysis.function.Gaussian;
 public class C_ModelInference {
 
     static double[] sensorTemp1Evidence = {22};
-    static double[] sensorTemp2Evidence = {23};
+    static double[] sensorTemp2Evidence = {33};
     static double[] sensorSmokeEvidence = {5};
 
     public static void main(String[] args) throws Exception {
@@ -72,8 +72,8 @@ public class C_ModelInference {
             System.out.println("Estimated Temperature: " + temp.getMean() +", "+temp.getVariance());
 
             //!!!!! Add the code for inferring the presence of smoke
-            Multinomial smokeProb = null;
-            System.out.println("Estimated Probability of Smoke: ");
+            Multinomial smokeProb = inferenceAlgorithm.getPosterior(fireDetector.getVariables().getVariableByName("Smoke"));
+            System.out.println("Estimated Probability of Smoke: " + smokeProb);
 
             Multinomial multinomial = inferenceAlgorithm.getPosterior(fire);
             System.out.println("Probability of Fire: " + multinomial.getProbabilityOfState(1));

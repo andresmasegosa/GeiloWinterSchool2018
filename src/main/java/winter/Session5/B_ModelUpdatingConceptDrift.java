@@ -39,7 +39,7 @@ public class B_ModelUpdatingConceptDrift {
         /********** Model Learning ************/
         //!!!!! Add the code to create the suitable learning engine.
         //Define the learning engine SVBFading (Streaming Variational Bayes with Fading) and the parameters
-        SVBFading svb = null;
+        SVBFading svb = new SVBFading();
         //Set the fading or exponential forgetting factor.
         svb.setFadingFactor(0.4);
         svb.setDAG(fireDetectorModel);
@@ -68,9 +68,11 @@ public class B_ModelUpdatingConceptDrift {
 
             //!!!!! Add the code for loading the dataset
             //Load the data set
+            data = DataStreamLoader.open("./datasets/bymonth/sensorReadings" + monthName[i] + ".arff");
 
             //!!!!! Add the code for updating the model
             //Update the model
+            svb.updateModel(data);
 
 
             //Get the learnt model

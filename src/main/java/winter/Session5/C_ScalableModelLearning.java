@@ -49,6 +49,7 @@ public class C_ScalableModelLearning {
 
         //Create the random variables of the model.
         // Some of them are associated to one attribute to retrieve its observed values from the data set.
+        Variable temperatureBuilding = variables.newGaussianVariable("TemperatureBuilding");
 
         Variable[] fire = new Variable[nRooms];
         Variable[] temperature = new Variable[nRooms];
@@ -77,6 +78,8 @@ public class C_ScalableModelLearning {
 
             dag.getParentSet(temperature[i]).addParent(fire[i]);
             dag.getParentSet(smoke[i]).addParent(fire[i]);
+
+            dag.getParentSet(temperature[i]).addParent(temperatureBuilding);
 
         }
 

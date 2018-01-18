@@ -30,13 +30,14 @@ public class F_AutoRegressiveHMM {
 
         //!!!!!!!! Add the code needed to run an AutoRegressive Hidden Markov Model !!!!!!!!!!!!!
         //Define the model (internally the skeleton is fixed)
-        DynamicModel model = null;
+        DynamicModel model = new AutoRegressiveHMM(data.getAttributes());
 
         //Print the skeleton of the model
         System.out.println(model.getDynamicDAG());
 
         //!!!!!!!! Add the code to learn the model
         //Learnt the parameters of the model
+        model.updateModel(data);
 
         //Print the learnt model
         System.out.println(model.getModel());

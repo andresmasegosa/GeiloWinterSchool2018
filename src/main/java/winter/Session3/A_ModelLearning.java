@@ -45,8 +45,10 @@ public class A_ModelLearning {
         //Create the random variables of the model. Some of them are associated to one attribute to retrieve its observed values from the data set.
         Variable fire = variables.newMultinomialVariable(attributes.getAttributeByName("Fire"));
         Variable temperature = variables.newGaussianVariable("Temperature");
+        Variable smoke = variables.newMultinomialVariable("Smoke",2);
         Variable sensorT1 = variables.newGaussianVariable(attributes.getAttributeByName("SensorTemp1"));
         Variable sensorT2 = variables.newGaussianVariable(attributes.getAttributeByName("SensorTemp2"));
+        Variable sensorSmoke = variables.newGaussianVariable(attributes.getAttributeByName("SensorSmoke"));
 
         //!!!!! Add the code for integrating a smoke sensor. Set the parent sets of the smoke and the smoke sensor accordingly.
         //Create the directed acyclic graph object encoding the conditional independe relaionship among the variables of the model.
@@ -56,8 +58,10 @@ public class A_ModelLearning {
         dag.getParentSet(sensorT1).addParent(temperature);
         dag.getParentSet(sensorT2).addParent(temperature);
 
+        dag.getParentSet(sensorSmoke).addParent(smoke);
 
         dag.getParentSet(temperature).addParent(fire);
+        dag.getParentSet(smoke).addParent(fire);
 
         /********** Model Learning ************/
         //Define the learning engine (Streaming Variational Bayes) and the parameters

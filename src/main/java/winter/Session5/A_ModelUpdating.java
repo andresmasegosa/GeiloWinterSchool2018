@@ -102,10 +102,11 @@ public class A_ModelUpdating {
 
             //!!!!! Add the code for loading the dataset
             //Load the data set
-            data = null;
+            data = DataStreamLoader.open("./datasets/bymonth/sensorReadings" + monthName[i] + ".arff");
 
             //!!!!! Add the code for updating the model
             //Update the model
+            svb.updateModel(data);
 
             //Get the learnt model
             BayesianNetwork model = svb.getLearntBayesianNetwork();

@@ -30,13 +30,14 @@ public class C_MixtureOfFactorAnalysis {
 
         //!!!!!!!! Add the code needed to create a Mixture of Factor Analysers model !!!!!!!!!!!!!!
         //Define the model (internally the skeleton is fixed)
-        Model model = null;
+        Model model = new MixtureOfFactorAnalysers(data.getAttributes());
 
         //Print the skeleton of the model
         System.out.println(model.getDAG());
 
         //!!!!!!!! Add the code to learn the model
         //Learnt the parameters of the model
+        model.updateModel(data);
 
         //Print the learnt model
         System.out.println(model.getModel());

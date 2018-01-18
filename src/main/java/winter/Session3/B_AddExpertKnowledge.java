@@ -42,8 +42,8 @@ public class B_AddExpertKnowledge {
         tempprob.getNormal(1).setVariance(tempprob.getNormal(0).getVariance());
 
         //!!!!! Add the code for stating the probability of smoke when there is a fire
-        //Multinomial_MultinomialParents smokeProb = ;
-        //smokeProb.getMultinomial(1).setProbabilities(new double[]{ ?, ?});
+        Multinomial_MultinomialParents smokeProb = fireDetector.getConditionalDistribution(smoke);
+        smokeProb.getMultinomial(1).setProbabilities(new double[]{0.001, 0.999});
 
         //Print the model
         System.out.println(fireDetector);
