@@ -41,3 +41,10 @@ For runing any Java file you should type:
 $ java -cp target/example-project-full.jar NameOfTheJavaFile
 
 ```
+
+##AMIDST Documentation
+
+1. AMIDST Toolbox web page is [www.amidsttoolbox.com](www.amidsttoolbox.com).
+2. Documentation with code examples can be found [here](http://www.amidsttoolbox.com/documentation/).
+3. Java Docs with all references to the API can be found [here](http://javadoc.amidsttoolbox.com/0.6.3/).
+
