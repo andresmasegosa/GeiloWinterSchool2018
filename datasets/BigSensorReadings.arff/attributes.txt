@@ -1,0 +1,40 @@
+@attribute Fire_0 0 {0.0, 1.0}
+@attribute SensorTemp1_0 1 real
+@attribute SensorTemp2_0 2 real
+@attribute SensorSmoke_0 3 real
+@attribute Fire_1 4 {0.0, 1.0}
+@attribute SensorTemp1_1 5 real
+@attribute SensorTemp2_1 6 real
+@attribute SensorSmoke_1 7 real
+@attribute Fire_2 8 {0.0, 1.0}
+@attribute SensorTemp1_2 9 real
+@attribute SensorTemp2_2 10 real
+@attribute SensorSmoke_2 11 real
+@attribute Fire_3 12 {0.0, 1.0}
+@attribute SensorTemp1_3 13 real
+@attribute SensorTemp2_3 14 real
+@attribute SensorSmoke_3 15 real
+@attribute Fire_4 16 {0.0, 1.0}
+@attribute SensorTemp1_4 17 real
+@attribute SensorTemp2_4 18 real
+@attribute SensorSmoke_4 19 real
+@attribute Fire_5 20 {0.0, 1.0}
+@attribute SensorTemp1_5 21 real
+@attribute SensorTemp2_5 22 real
+@attribute SensorSmoke_5 23 real
+@attribute Fire_6 24 {0.0, 1.0}
+@attribute SensorTemp1_6 25 real
+@attribute SensorTemp2_6 26 real
+@attribute SensorSmoke_6 27 real
+@attribute Fire_7 28 {0.0, 1.0}
+@attribute SensorTemp1_7 29 real
+@attribute SensorTemp2_7 30 real
+@attribute SensorSmoke_7 31 real
+@attribute Fire_8 32 {0.0, 1.0}
+@attribute SensorTemp1_8 33 real
+@attribute SensorTemp2_8 34 real
+@attribute SensorSmoke_8 35 real
+@attribute Fire_9 36 {0.0, 1.0}
+@attribute SensorTemp1_9 37 real
+@attribute SensorTemp2_9 38 real
+@attribute SensorSmoke_9 39 real
