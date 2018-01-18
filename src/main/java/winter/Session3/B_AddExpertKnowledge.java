@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session3;
+package winter.Session3;
 
 import eu.amidst.core.distribution.Multinomial;
 import eu.amidst.core.distribution.Multinomial_MultinomialParents;

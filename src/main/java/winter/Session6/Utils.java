@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session6;
+package winter.Session6;
 
 import eu.amidst.core.datastream.DataStream;
 import eu.amidst.core.distribution.*;
@@ -150,6 +150,6 @@ public class Utils {
 
     public static void main(String[] args) throws Exception {
         generateData();
-        generateEvidenceData();
+        //generateEvidenceData();
     }
 }

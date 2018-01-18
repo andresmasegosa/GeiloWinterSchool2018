@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session5;
+package winter.Session5;
 
 import com.google.common.base.Stopwatch;
 import eu.amidst.core.constraints.Constraint;

@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session3;
+package winter.Session3;
 
 import eu.amidst.core.distribution.Multinomial;
 import eu.amidst.core.distribution.Normal;
@@ -30,7 +30,7 @@ import org.apache.commons.math3.analysis.function.Gaussian;
  */
 public class C_ModelInference {
 
-    static double[] sensorTemp1Evidence = {22};
+    static double[] sensorTemp1Evidence = {25};
     static double[] sensorTemp2Evidence = {23};
     static double[] sensorSmokeEvidence = {5};
 

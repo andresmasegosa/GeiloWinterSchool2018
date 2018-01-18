@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session5;
+package winter.Session5;
 
 import eu.amidst.core.conceptdrift.SVBFading;
 import eu.amidst.core.constraints.Constraint;
@@ -21,7 +21,7 @@ import eu.amidst.core.models.BayesianNetwork;
 import eu.amidst.core.models.DAG;
 import eu.amidst.core.variables.Variable;
 
-import static eu.amidst.winter.Session5.A_ModelUpdating.creatFireDectectorModel;
+import static winter.Session5.A_ModelUpdating.creatFireDectectorModel;
 
 /**
  * Session 5. Define, learn and update using exponential forgetting (a.k.a. fading) the fire detector model.

@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session6;
+package winter.Session6;
 
 import eu.amidst.core.datastream.Attributes;
 import eu.amidst.core.datastream.DataStream;

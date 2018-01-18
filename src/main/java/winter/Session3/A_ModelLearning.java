@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session3;
+package winter.Session3;
 
 import eu.amidst.core.constraints.Constraint;
 import eu.amidst.core.datastream.Attributes;
