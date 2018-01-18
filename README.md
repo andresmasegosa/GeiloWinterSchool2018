@@ -49,16 +49,31 @@ $ java -cp target/example-project-full.jar NameOfTheJavaFile
 
 ```
 
-# Probabilistic Machine Learning with the AMIDST Toolbox
+## Probabilistic Machine Learning with the AMIDST Toolbox
 
-## Session 1: Introduction to Probabilistic Machine Learning
-  
-   * Slides can be downloaded [here]().
+The lessons will be divided in six sessions. 
 
-## Session 2: Introduction to the AMIDST Toolbox.
-  
-   * Slides can be downloaded [here]().
-   * Code exercises can be found [here](). 
+* **Session 1**: Introduction to Probabilistic Machine Learning
+   - Slides can be downloaded [here]().
+
+* **Session 2**: Introduction to the AMIDST Toolbox.
+   - Slides can be downloaded [here]().
+   - Code exercises can be found [here](). 
+
+* **Session 3**: Coding an Intelligent Fire Detector System with the AMIDST Toolbox.
+   - Slides can be downloaded [here]().
+   - Code exercises can be found [here](). 
+
+* **Session 4**: Latent Variable Models.
+   - Slides can be downloaded [here]().
+
+* **Session 5**: Streaming data, Scalable Learning and Temporal Models with the AMIDST Toolbox.
+   - Slides can be downloaded [here]().
+   - Code exercises can be found [here](). 
+
+* **Session 6**: Future Trends in Probabilistic Machine Learning.
+   - Slides can be downloaded [here]().
+
 
     
 
