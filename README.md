@@ -58,18 +58,18 @@ The lessons will be divided in six sessions (45 minutes).
 
 * **Session 2**: Introduction to the AMIDST Toolbox.
    - Slides can be downloaded [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/raw/master/slides/Slides2-IntroAmidst.pdf).
-   - Code exercises can be found [here](). 
+   - Code exercises can be found [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/tree/master/src/main/java/winter/Session2). 
 
 * **Session 3**: Coding an Intelligent Fire Detector System with the AMIDST Toolbox.
    - Slides can be downloaded [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/raw/master/slides/Slides3-FireDetector.pdf.pdf).
-   - Code exercises can be found [here](). 
+   - Code exercises can be found [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/tree/master/src/main/java/winter/Session3). 
 
 * **Session 4**: Latent Variable Models.
    - Slides can be downloaded [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/raw/master/slides/Slides4-LVMs.pdf).
 
 * **Session 5**: Streaming data, Scalable Learning and Temporal Models with the AMIDST Toolbox.
    - Slides can be downloaded [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/raw/master/slides/Slides5-StreamsScalability.pdf).
-   - Code exercises can be found [here](). 
+   - Code exercises can be found [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/tree/master/src/main/java/winter/Session5). 
 
 * **Session 6**: Future Trends in Probabilistic Machine Learning.
    - Slides can be downloaded [here]().
