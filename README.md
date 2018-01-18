@@ -51,7 +51,7 @@ $ java -cp target/example-project-full.jar NameOfTheJavaFile
 
 ## Probabilistic Machine Learning with the AMIDST Toolbox
 
-The lessons will be divided in six sessions. 
+The lessons will be divided in six sessions (45 minutes). 
 
 * **Session 1**: Introduction to Probabilistic Machine Learning
    - Slides can be downloaded [here]().
