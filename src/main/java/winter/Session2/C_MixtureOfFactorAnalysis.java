@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session2;
+package winter.Session2;
 
 import eu.amidst.core.datastream.DataInstance;
 import eu.amidst.core.datastream.DataStream;
@@ -19,7 +19,7 @@ import eu.amidst.latentvariablemodels.staticmodels.MixtureOfFactorAnalysers;
 import eu.amidst.latentvariablemodels.staticmodels.Model;
 
 /**
- *  Session 2.
+ *  Session 2. Latent Variable Models
  * Created by andresmasegosa on 16/01/2018.
  */
 public class C_MixtureOfFactorAnalysis {
@@ -27,14 +27,16 @@ public class C_MixtureOfFactorAnalysis {
         //Load the data set
         DataStream<DataInstance> data = DataStreamLoader.open("./datasets/artificialDataset.arff");
 
+
+        //!!!!!!!! Add the code needed to create a Mixture of Factor Analysers model !!!!!!!!!!!!!!
         //Define the model (internally the skeleton is fixed)
-        Model model = new MixtureOfFactorAnalysers(data.getAttributes());
+        Model model = null;
 
         //Print the skeleton of the model
         System.out.println(model.getDAG());
 
+        //!!!!!!!! Add the code to learn the model
         //Learnt the parameters of the model
-        model.updateModel(data);
 
         //Print the learnt model
         System.out.println(model.getModel());

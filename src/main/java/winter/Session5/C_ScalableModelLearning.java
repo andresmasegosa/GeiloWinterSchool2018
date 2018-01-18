@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session5;
+package winter.Session5;
 
 import com.google.common.base.Stopwatch;
 import eu.amidst.core.constraints.Constraint;
@@ -41,13 +41,14 @@ public class C_ScalableModelLearning {
      */
     public static DAG creatBigFireDectectorModel(Attributes attributes, int nRooms){
 
+        //!!! Add the code needed to integrate the latent variable Temperature Building within the model
+
         /********** Model Definition ************/
         //Create the object handling the random variables of the model
         Variables variables = new Variables();
 
         //Create the random variables of the model.
         // Some of them are associated to one attribute to retrieve its observed values from the data set.
-        Variable temperatureBuilding = variables.newGaussianVariable("TemperatureBuilding");
 
         Variable[] fire = new Variable[nRooms];
         Variable[] temperature = new Variable[nRooms];
@@ -77,7 +78,6 @@ public class C_ScalableModelLearning {
             dag.getParentSet(temperature[i]).addParent(fire[i]);
             dag.getParentSet(smoke[i]).addParent(fire[i]);
 
-            dag.getParentSet(temperature[i]).addParent(temperatureBuilding);
         }
 
         //Print the defined DAG
@@ -91,6 +91,8 @@ public class C_ScalableModelLearning {
         //Define the execution environment for Flink. In this case, it is a local execution environment.
         ExecutionEnvironment env = ExecutionEnvironment.createLocalEnvironment();
         env.getConfig().disableSysoutLogging();
+
+        //!!! Modify the level of paralellism and investigate the effects on the running time.
         env.setParallelism(4);
 
         /********** DATA LOADING ***************/
@@ -118,9 +120,10 @@ public class C_ScalableModelLearning {
             svb.addParameterConstraint(new Constraint("beta1", sensorT1, 1.0));
             svb.addParameterConstraint(new Constraint("beta1", sensorT2, 1.0));
 
+            //!!! Add the code needed to define Temp_i = TemperatureBuilding + smallVariance
             Variable temp = fireDetectorModel.getVariables().getVariableByName("Temperature_"+i);
-            svb.addParameterConstraint(new Constraint("alpha | {Fire_"+i+" = 0}", temp, 0.0));
-            svb.addParameterConstraint(new Constraint("beta1 | {Fire_"+i+" = 0}", temp, 1.0));
+            //svb.addParameterConstraint(new Constraint("alpha | {Fire_"+i+" = 0}", temp, ?));
+            //svb.addParameterConstraint(new Constraint("beta1 | {Fire_"+i+" = 0}", temp, ?));
 
         }
 

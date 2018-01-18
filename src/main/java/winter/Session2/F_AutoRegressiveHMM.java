@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session2;
+package winter.Session2;
 
 import eu.amidst.core.datastream.DataStream;
 import eu.amidst.dynamic.datastream.DynamicDataInstance;
@@ -28,14 +28,15 @@ public class F_AutoRegressiveHMM {
         //Load the data set
         DataStream<DynamicDataInstance> data = DynamicDataStreamLoader.open("./datasets/artificialDataset.arff");
 
+        //!!!!!!!! Add the code needed to run an AutoRegressive Hidden Markov Model !!!!!!!!!!!!!
         //Define the model (internally the skeleton is fixed)
-        DynamicModel model = new AutoRegressiveHMM(data.getAttributes());
+        DynamicModel model = null;
 
         //Print the skeleton of the model
         System.out.println(model.getDynamicDAG());
 
+        //!!!!!!!! Add the code to learn the model
         //Learnt the parameters of the model
-        model.updateModel(data);
 
         //Print the learnt model
         System.out.println(model.getModel());

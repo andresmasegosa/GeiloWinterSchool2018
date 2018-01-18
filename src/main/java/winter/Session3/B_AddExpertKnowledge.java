@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session3;
+package winter.Session3;
 
 import eu.amidst.core.distribution.Multinomial;
 import eu.amidst.core.distribution.Multinomial_MultinomialParents;
@@ -41,8 +41,9 @@ public class B_AddExpertKnowledge {
         tempprob.getNormal(1).setMean(tempprob.getNormal(0).getMean()+10);
         tempprob.getNormal(1).setVariance(tempprob.getNormal(0).getVariance());
 
-        Multinomial_MultinomialParents smokeProb = fireDetector.getConditionalDistribution(smoke);
-        smokeProb.getMultinomial(1).setProbabilities(new double[]{0.001, 0.999});
+        //!!!!! Add the code for stating the probability of smoke when there is a fire
+        //Multinomial_MultinomialParents smokeProb = ;
+        //smokeProb.getMultinomial(1).setProbabilities(new double[]{ ?, ?});
 
         //Print the model
         System.out.println(fireDetector);

@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session5;
+package winter.Session5;
 
 import eu.amidst.core.constraints.Constraint;
 import eu.amidst.core.datastream.Attribute;
@@ -81,6 +81,7 @@ public class A_ModelUpdating {
         svb.setWindowsSize(1000);
 
         //Specify the associated constraints (econding prior knowledge)
+        Variable temperature = fireDetectorModel.getVariables().getVariableByName("Temperature");
         Variable sensorT1 = fireDetectorModel.getVariables().getVariableByName("SensorTemp1");
         Variable sensorT2 = fireDetectorModel.getVariables().getVariableByName("SensorTemp2");
         svb.addParameterConstraint(new Constraint("alpha", sensorT1, 0.0));
@@ -99,18 +100,19 @@ public class A_ModelUpdating {
         for (int i = 0; i < monthName.length; i++) {
             System.out.println("------------Fire Detector Model at Month: " + monthName[i] + "-----------------");
 
+            //!!!!! Add the code for loading the dataset
             //Load the data set
-            data = DataStreamLoader.open("./datasets/bymonth/sensorReadings" + monthName[i] + ".arff");
+            data = null;
 
-            //Perform Learning
-            svb.updateModel(data);
+            //!!!!! Add the code for updating the model
+            //Update the model
 
             //Get the learnt model
             BayesianNetwork model = svb.getLearntBayesianNetwork();
             System.out.println(model);
 
             //Access the estimated indoor temperature
-            Normal_MultinomialParents dist = model.getConditionalDistribution(fireDetectorModel.getVariables().getVariableByName("Temperature"));
+            Normal_MultinomialParents dist = model.getConditionalDistribution(temperature);
             tempsMonth[i] = dist.getNormal(0).getMean();
         }
 

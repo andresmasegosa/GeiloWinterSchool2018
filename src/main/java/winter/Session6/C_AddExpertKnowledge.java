@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session6;
+package winter.Session6;
 
 import eu.amidst.core.distribution.Multinomial;
 import eu.amidst.core.distribution.Multinomial_MultinomialParents;
@@ -46,8 +46,9 @@ public class C_AddExpertKnowledge {
         tempprob.getNormal(1).setMean(tempprob.getNormal(0).getMean()+10);
         tempprob.getNormal(1).setVariance(tempprob.getNormal(0).getVariance());
 
-        Multinomial_MultinomialParents smokeProb = fireDetector.getConditionalDistributionTime0(smoke);
-        smokeProb.getMultinomial(1).setProbabilities(new double[]{0.001, 0.999});
+        //!!!!! Add the code for stating the probability of smoke when there is a fire at time 0
+        //Multinomial_MultinomialParents smokeProb = ;
+        //smokeProb.getMultinomial(1).setProbabilities(new double[]{?, ?});
 
         /******* Parameters Time T ***********/
         //Modify the parameters of the model according to our prior knowledge.
@@ -55,9 +56,10 @@ public class C_AddExpertKnowledge {
         fireprobTimeT.getMultinomial(0).setProbabilities(new double[]{0.999, 0.001});
         fireprobTimeT.getMultinomial(1).setProbabilities(new double[]{0.01, 0.99});
 
-        Multinomial_MultinomialParents smokeProbTimeT = fireDetector.getConditionalDistributionTimeT(smoke);
-        smokeProbTimeT.getMultinomial(1).setProbabilities(new double[]{0.001, 0.999});
-        smokeProbTimeT.getMultinomial(3).setProbabilities(new double[]{0.001, 0.999});
+        //!!!!! Add the code for stating the probability of smoke when there is a fire at time t
+        //Multinomial_MultinomialParents smokeProbTimeT = ;
+        //smokeProbTimeT.getMultinomial(1).setProbabilities(new double[]{?, ?});
+        //smokeProbTimeT.getMultinomial(3).setProbabilities(new double[]{?, ?});
 
         Normal_MultinomialNormalParents tempTimeT = fireDetector.getConditionalDistributionTimeT(temperature);
         tempTimeT.getNormal_NormalParentsDistribution(1).setIntercept(tempprob.getNormal(0).getMean()+10);

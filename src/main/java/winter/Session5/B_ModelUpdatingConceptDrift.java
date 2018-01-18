@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session5;
+package winter.Session5;
 
 import eu.amidst.core.conceptdrift.SVBFading;
 import eu.amidst.core.constraints.Constraint;
@@ -21,7 +21,7 @@ import eu.amidst.core.models.BayesianNetwork;
 import eu.amidst.core.models.DAG;
 import eu.amidst.core.variables.Variable;
 
-import static eu.amidst.winter.Session5.A_ModelUpdating.creatFireDectectorModel;
+import static winter.Session5.A_ModelUpdating.creatFireDectectorModel;
 
 /**
  * Session 5. Define, learn and update using exponential forgetting (a.k.a. fading) the fire detector model.
@@ -37,8 +37,9 @@ public class B_ModelUpdatingConceptDrift {
         DAG fireDetectorModel = creatFireDectectorModel(data.getAttributes());
 
         /********** Model Learning ************/
-        //Define the learning engine (Streaming Variational Bayes with Fading) and the parameters
-        SVBFading svb = new SVBFading();
+        //!!!!! Add the code to create the suitable learning engine.
+        //Define the learning engine SVBFading (Streaming Variational Bayes with Fading) and the parameters
+        SVBFading svb = null;
         //Set the fading or exponential forgetting factor.
         svb.setFadingFactor(0.4);
         svb.setDAG(fireDetectorModel);
@@ -46,6 +47,7 @@ public class B_ModelUpdatingConceptDrift {
         svb.setWindowsSize(1000);
 
         //Specify the associated constraints (econding prior knowledge)
+        Variable temperature = fireDetectorModel.getVariables().getVariableByName("Temperature");
         Variable sensorT1 = fireDetectorModel.getVariables().getVariableByName("SensorTemp1");
         Variable sensorT2 = fireDetectorModel.getVariables().getVariableByName("SensorTemp2");
         svb.addParameterConstraint(new Constraint("alpha", sensorT1, 0.0));
@@ -64,18 +66,19 @@ public class B_ModelUpdatingConceptDrift {
         for (int i = 0; i < monthName.length; i++) {
             System.out.println("------------Fire Detector Model at Month: "+ monthName[i]+"-----------------");
 
+            //!!!!! Add the code for loading the dataset
             //Load the data set
-            data = DataStreamLoader.open("./datasets/bymonth/sensorReadings"+monthName[i]+".arff");
 
-            //Perform Learning
-            svb.updateModel(data);
+            //!!!!! Add the code for updating the model
+            //Update the model
+
 
             //Get the learnt model
             BayesianNetwork model = svb.getLearntBayesianNetwork();
             System.out.println(model);
 
             //Access the estimated indoor temperature
-            Normal_MultinomialParents dist = model.getConditionalDistribution(fireDetectorModel.getVariables().getVariableByName("Temperature"));
+            Normal_MultinomialParents dist = model.getConditionalDistribution(temperature);
             tempsMonth[i] = dist.getNormal(0).getMean();
         }
 

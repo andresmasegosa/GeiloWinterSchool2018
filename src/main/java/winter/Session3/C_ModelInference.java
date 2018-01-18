@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session3;
+package winter.Session3;
 
 import eu.amidst.core.distribution.Multinomial;
 import eu.amidst.core.distribution.Normal;
@@ -54,11 +54,12 @@ public class C_ModelInference {
         //Prepare the evidence object
         Assignment assignment = new HashMapAssignment(3);
 
+        //!!!!! Add the code for integrating smoke sensor readings
         for (int i = 0; i < sensorTemp1Evidence.length; i++) {
+            //!!!!! Add the code for setting the values of smoke sensor readings.
             //Set the values of the evidence for the given variables.
             assignment.setValue(sensorTemp1,sensorTemp1Evidence[i]);
             assignment.setValue(sensorTemp2,sensorTemp2Evidence[i]);
-            assignment.setValue(sensorSmoke,sensorSmokeEvidence[i]);
             inferenceAlgorithm.setEvidence(assignment);
 
             //Perform the inference
@@ -66,10 +67,13 @@ public class C_ModelInference {
 
             //Retrieve and print the results of the inference.
             System.out.println("Temperature Sensor Readings: "+ sensorTemp1Evidence[i] +" "+ sensorTemp2Evidence[i]);
-            System.out.println("Smoke Sensor Reading:" + sensorSmokeEvidence[i]);
 
             Normal temp = inferenceAlgorithm.getPosterior(temperature);
             System.out.println("Estimated Temperature: " + temp.getMean() +", "+temp.getVariance());
+
+            //!!!!! Add the code for inferring the presence of smoke
+            Multinomial smokeProb = null;
+            System.out.println("Estimated Probability of Smoke: ");
 
             Multinomial multinomial = inferenceAlgorithm.getPosterior(fire);
             System.out.println("Probability of Fire: " + multinomial.getProbabilityOfState(1));

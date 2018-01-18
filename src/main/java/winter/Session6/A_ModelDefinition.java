@@ -9,7 +9,7 @@
  *
  */
 
-package eu.amidst.winter.Session6;
+package winter.Session6;
 
 import eu.amidst.core.datastream.Attributes;
 import eu.amidst.core.datastream.DataStream;
@@ -37,14 +37,14 @@ public class A_ModelDefinition {
         //Create the object handling the random variables of the model
         DynamicVariables variables = new DynamicVariables();
 
+        //!!!!! Add the code for integrating a smoke sensor. Define the smoke variable and the smoke sensor variable and their temporal connections.
         //Create the random variables of the model. Some of them are associated to one attribute to retrieve its observed values from the data set.
         Variable fire = variables.newMultinomialDynamicVariable(attributes.getAttributeByName("Fire"));
         Variable temperature = variables.newGaussianDynamicVariable("Temperature");
-        Variable smoke = variables.newMultinomialDynamicVariable("Smoke", 2);
         Variable sensorT1 = variables.newGaussianDynamicVariable(attributes.getAttributeByName("SensorTemp1"));
         Variable sensorT2 = variables.newGaussianDynamicVariable(attributes.getAttributeByName("SensorTemp2"));
-        Variable sensorSmoke = variables.newGaussianDynamicVariable(attributes.getAttributeByName("SensorSmoke"));
 
+        //!!!!! Add the code for integrating a smoke sensor. Set the parent sets of the smoke and the smoke sensor accordingly.
         //Create the directed acyclic graph object encoding the conditional independe relaionship among the variables of the model.
         DynamicDAG dag = new DynamicDAG(variables);
 
@@ -52,15 +52,11 @@ public class A_ModelDefinition {
         dag.getParentSetTimeT(sensorT1).addParent(temperature);
         dag.getParentSetTimeT(sensorT2).addParent(temperature);
 
-        dag.getParentSetTimeT(sensorSmoke).addParent(smoke);
 
         dag.getParentSetTimeT(temperature).addParent(fire);
 
         //Interface varible refers to the occurrence of this variable in the previous time step.
         dag.getParentSetTimeT(temperature).addParent(temperature.getInterfaceVariable());
-
-        dag.getParentSetTimeT(smoke).addParent(fire);
-        dag.getParentSetTimeT(smoke).addParent(smoke.getInterfaceVariable());
 
         dag.getParentSetTimeT(fire).addParent(fire.getInterfaceVariable());
 
