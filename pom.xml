@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eu.amidst</groupId>
-    <artifactId>example-project</artifactId>
-    <version>0.6.3</version>
+    <artifactId>GeiloWinterSchool2018</artifactId>
+    <version>0.0.1</version>
     <build>
         <plugins>
 
@@ -28,7 +28,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                    <finalName>example-project-full</finalName>
+                    <finalName>GeiloWinterSchool2018-full</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
                 <executions>
@@ -67,13 +67,60 @@
     </repositories>
 
     <dependencies>
-    <dependency>
-        <groupId>eu.amidst</groupId>
-        <artifactId>latent-variable-models</artifactId>
-        <version>0.6.3</version>
-        <scope>compile</scope>
-    </dependency>
+        <dependency>
+            <artifactId>core</artifactId>
+            <groupId>eu.amidst</groupId>
+            <version>0.6.3</version> <!-- AmidstVersion -->
+        </dependency>
 
+        <dependency>
+            <artifactId>core-dynamic</artifactId>
+            <groupId>eu.amidst</groupId>
+            <version>0.6.3</version> <!-- AmidstVersion -->
+        </dependency>
+
+        <dependency>
+            <artifactId>huginlink</artifactId>
+            <groupId>eu.amidst</groupId>
+            <version>0.6.3</version> <!-- AmidstVersion -->
+        </dependency>
+        <dependency>
+            <groupId>eu.amidst</groupId>
+            <artifactId>latent-variable-models</artifactId>
+            <version>0.6.3</version> <!-- AmidstVersion -->
+        </dependency>
+        <dependency>
+            <artifactId>sparklink</artifactId>
+            <groupId>eu.amidst</groupId>
+            <version>0.6.3</version> <!-- AmidstVersion -->
+        </dependency>
+        <dependency>
+            <artifactId>flinklink</artifactId>
+            <groupId>eu.amidst</groupId>
+            <version>0.6.3</version> <!-- AmidstVersion -->
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-java</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-clients_2.10</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-java_2.10</artifactId>
+            <version>1.0.3</version>
+        </dependency>
     </dependencies>
 
 
