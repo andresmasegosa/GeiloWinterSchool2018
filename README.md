@@ -45,7 +45,7 @@ $ mvn clean package
 For runing any Java file you should type:
 
 ```bash
-$ java -cp target/example-project-full.jar NameOfTheJavaFile
+   $ java -cp target/GeiloWinterSchool2018-full.jar winter.Session2.A_GaussianMixture
 
 ```
 
