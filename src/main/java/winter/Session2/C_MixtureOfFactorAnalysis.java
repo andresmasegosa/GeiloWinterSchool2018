@@ -24,8 +24,9 @@ import eu.amidst.latentvariablemodels.staticmodels.Model;
  */
 public class C_MixtureOfFactorAnalysis {
     public static void main(String[] args) {
+        //!!!!!!!! Add the code needed to load the data set !!!!!!!!!!!!!!
         //Load the data set
-        DataStream<DataInstance> data = DataStreamLoader.open("./datasets/artificialDataset.arff");
+        DataStream<DataInstance> data = null;
 
 
         //!!!!!!!! Add the code needed to create a Mixture of Factor Analysers model !!!!!!!!!!!!!!

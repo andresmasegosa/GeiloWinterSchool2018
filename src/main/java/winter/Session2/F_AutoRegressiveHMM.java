@@ -25,8 +25,9 @@ import eu.amidst.latentvariablemodels.dynamicmodels.SwitchingKalmanFilter;
  */
 public class F_AutoRegressiveHMM {
     public static void main(String[] args) {
+        //!!!!!!!! Add the code needed to load the data set !!!!!!!!!!!!!!
         //Load the data set
-        DataStream<DynamicDataInstance> data = DynamicDataStreamLoader.open("./datasets/artificialDataset.arff");
+        DataStream<DynamicDataInstance> data = null;
 
         //!!!!!!!! Add the code needed to run an AutoRegressive Hidden Markov Model !!!!!!!!!!!!!
         //Define the model (internally the skeleton is fixed)
