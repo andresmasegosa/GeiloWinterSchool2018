@@ -2,11 +2,11 @@
 
 ## Install AMIDST Toolbox
 
-First, check whether you have installed Java 8:
+First, check whether you have installed Java 8 or Java 9:
 ```bash
 $ java -version
 ```
-If Java 8 is not installed download it from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+If Java 8 (or Java 9) is not installed download it from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 For compiling and runing the toolbox you have two options:
 
