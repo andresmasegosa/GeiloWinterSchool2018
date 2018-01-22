@@ -17,7 +17,7 @@ For compiling and runing the toolbox you have two options:
 
 ## AMIDST Toolbox Documentation
 
-1. AMIDST Toolbox web page is [www.amidsttoolbox.com](www.amidsttoolbox.com).
+1. AMIDST Toolbox web page is [www.amidsttoolbox.com](http://www.amidsttoolbox.com).
 2. Documentation with code examples can be found [here](http://www.amidsttoolbox.com/documentation/).
 3. Java Docs with all references to the API can be found [here](http://javadoc.amidsttoolbox.com/0.6.3/).
 
