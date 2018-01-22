@@ -2,22 +2,22 @@
 
 ## Install AMIDST Toolbox
 
-First, check whether you have installed Java 8:
+First, check whether you have installed Java 8 or Java 9:
 ```bash
 $ java -version
 ```
-If Java 8 is not installed download it from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+If Java 8 (or Java 9) is not installed download it from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 For compiling and runing the toolbox you have two options:
 
-1. **Intellij IDEA**: You can download it from [here](https://www.jetbrains.com/idea/). 
+1. **Intellij IDEA** (recommended): You can download it from [here](https://www.jetbrains.com/idea/). 
 
 2. **Maven**: Follow the [official web page](https://maven.apache.org/install.html) for instructions about how to install it. 
 
 
 ## AMIDST Toolbox Documentation
 
-1. AMIDST Toolbox web page is [www.amidsttoolbox.com](www.amidsttoolbox.com).
+1. AMIDST Toolbox web page is [www.amidsttoolbox.com](http://www.amidsttoolbox.com).
 2. Documentation with code examples can be found [here](http://www.amidsttoolbox.com/documentation/).
 3. Java Docs with all references to the API can be found [here](http://javadoc.amidsttoolbox.com/0.6.3/).
 
@@ -45,7 +45,7 @@ $ mvn clean package
 For runing any Java file you should type:
 
 ```bash
-$ java -cp target/example-project-full.jar NameOfTheJavaFile
+   $ java -cp target/GeiloWinterSchool2018-full.jar winter.Session2.A_GaussianMixture
 
 ```
 
