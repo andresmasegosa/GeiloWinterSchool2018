@@ -35,7 +35,6 @@ public class C_AddExpertKnowledge {
         //Access the variable of interest.
         Variable fire = fireDetector.getDynamicVariables().getVariableByName("Fire");
         Variable temperature = fireDetector.getDynamicVariables().getVariableByName("Temperature");
-        Variable smoke = fireDetector.getDynamicVariables().getVariableByName("Smoke");
 
         /******* Parameters Time 0 ***********/
         //Modify the parameters of the model according to our prior knowledge.

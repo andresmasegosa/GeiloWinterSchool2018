@@ -93,7 +93,7 @@ public class C_ScalableModelLearning {
         env.getConfig().disableSysoutLogging();
 
         //!!! Modify the level of paralellism and investigate the effects on the running time.
-        env.setParallelism(4);
+        env.setParallelism(1);
 
         /********** DATA LOADING ***************/
         //Load the data set
