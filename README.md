@@ -10,7 +10,7 @@ If Java 8 is not installed download it from [here](http://www.oracle.com/technet
 
 For compiling and runing the toolbox you have two options:
 
-1. **Intellij IDEA**: You can download it from [here](https://www.jetbrains.com/idea/). 
+1. **Intellij IDEA** (recommended): You can download it from [here](https://www.jetbrains.com/idea/). 
 
 2. **Maven**: Follow the [official web page](https://maven.apache.org/install.html) for instructions about how to install it. 
 
