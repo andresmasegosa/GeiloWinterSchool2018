@@ -43,7 +43,6 @@ public class C_ModelInference {
         Variable temperature = fireDetector.getVariables().getVariableByName("Temperature");
         Variable sensorTemp1 = fireDetector.getVariables().getVariableByName("SensorTemp1");
         Variable sensorTemp2 = fireDetector.getVariables().getVariableByName("SensorTemp2");
-        Variable sensorSmoke = fireDetector.getVariables().getVariableByName("SensorSmoke");
 
         //Create an instance of a inference algorithm. In this case, we use the Importance Sampling .
         InferenceAlgorithm inferenceAlgorithm = new ImportanceSampling();

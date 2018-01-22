@@ -31,7 +31,6 @@ public class B_AddExpertKnowledge {
         //Access the variable of interest.
         Variable fire = fireDetector.getVariables().getVariableByName("Fire");
         Variable temperature = fireDetector.getVariables().getVariableByName("Temperature");
-        Variable smoke = fireDetector.getVariables().getVariableByName("Smoke");
 
         //Modify the parameters of the model according to our prior knowledge.
         Multinomial fireprob = fireDetector.getConditionalDistribution(fire);
