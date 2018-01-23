@@ -72,7 +72,7 @@ The lessons will be divided in six sessions (45 minutes).
    - Code exercises can be found [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/tree/master/src/main/java/winter/Session5). 
 
 * **Session 6**: Future Trends in Probabilistic Machine Learning.
-   - Slides can be downloaded [here]().
+   - Slides can be downloaded [here](https://github.com/andresmasegosa/GeiloWinterSchool2018/raw/master/slides/Slides6-FutureTrends.pdf).
 
 
     
